@@ -12,9 +12,9 @@
   </head>
   <body class="bg-pink-500">
     <!-- navbar -->
-    <nav id="nav" class="fixed inset-x-0 top-0 flex flex-row justify-center z-10 text-white bg-transparent">  
+    <nav id="nav" class="topnav fixed inset-x-0 top-0 flex flex-row justify-center z-10 text-white bg-transparent">  
       <!-- Nav Items Working on Tablet & Bigger Sceen -->
-      <div class="p-4 hidden md:flex flex-row justify-center font-bold">
+      <div id="myLinks" class="p-4 hidden md:flex flex-row justify-center font-bold">
         <a id="hide-after-click" href="#about" class="mx-4 text-lg  border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Home</a>
         <a href="#whyus" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Dates</a>
         <a href="#showcase" class="mx-4 text-lg border-b-2 border-transparent hover:border-b-2 hover:border-indigo-300 transition duration-500">Contact</a>
@@ -23,12 +23,14 @@
   
       <!-- Burger Nav Button on Mobile -->
       <div id="nav-open" class="p-4 md:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-         stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </a>
       </div>
     </nav>
   
@@ -54,32 +56,6 @@
 
     <!-- Page content -->
     <div class="content" style="max-width:2000px;margin-top:46px">
-
-      <!-- Automatic Slideshow Images -->
-      <div class="mySlides display-container center" style="display: block;">
-        <img src="#" style="width:100%">
-        <div class="display-bottommiddle container text-white padding-32 hide-small">
-          <h3>Los Angeles</h3>
-          <p><b>We had the best time playing at Venice Beach!</b></p>   
-        </div>
-      </div>
-      <div class="mySlides display-container center" style="display: none;">
-        <img src="#" style="width:100%">
-        <div class="display-bottommiddle container text-white padding-32 hide-small">
-          <h3>New York</h3>
-          <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
-        </div>
-      </div>
-      <div class="mySlides display-container center" style="display: none;">
-        <img src="#" style="width:100%">
-        <div class="display-bottommiddle container text-white padding-32 hide-small">
-          <h3>Chicago</h3>
-          <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
-        </div>
-      </div>
-
-
-
       <!-- The Tour Section -->
       <div class="" id="tour">
         <div class="container content padding-64" style="max-width:800px">
@@ -94,7 +70,6 @@
 
           <div class="row-padding padding-32" style="margin:0 -16px">
             <div class="third margin-bottom">
-              <img src="#" alt="New York" style="width:100%" class="hover-opacity">
               <div class="container white">
                 <p><b>New York</b></p>
                 <p class="opacity">Fri 27 Nov 2016</p>
@@ -103,7 +78,6 @@
               </div>
             </div>
             <div class="third margin-bottom">
-              <img src="#" alt="Paris" style="width:100%" class="hover-opacity">
               <div class="container white">
                 <p><b>Paris</b></p>
                 <p class="opacity">Sat 28 Nov 2016</p>
@@ -112,7 +86,6 @@
               </div>
             </div>
             <div class="third margin-bottom">
-              <img src="#" alt="San Francisco" style="width:100%" class="hover-opacity">
               <div class="container white">
                 <p><b>San Francisco</b></p>
                 <p class="opacity">Sun 29 Nov 2016</p>
@@ -154,8 +127,8 @@
     <!-- End Page Content -->
     </div>
 
-    <!-- Image of location/map -->
-    <img src="#" class="image greyscale-min" style="width:100%">
+    <!-- Image -->
+    <img src="assets/beth-skate.jpg">
 
     <!-- Footer -->
     <div class="flex flex-col">
