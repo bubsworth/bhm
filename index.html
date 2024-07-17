@@ -6,40 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <link rel="stylesheet" href="style.css">
-    <title>Beth Hubbard</title>
+    <title>Beth Hubnavbard</title>
     <style>
       body {font-family: "Lato", sans-serif}
       .mySlides {display: none}
     </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
   </head>
   <body>
-  	<script src="js/index.js"></script>
-    <!-- Navbar -->
+    <!-- navbar -->
     <div class="top">
-      <div class="bar black card">
-        <a class="bar-item button padding-large hide-medium hide-large right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="#" class="bar-item button padding-large">HOME</a>
-        <a href="#band" class="bar-item button padding-large hide-small">BAND</a>
-        <a href="#tour" class="bar-item button padding-large hide-small">TOUR</a>
-        <a href="#contact" class="bar-item button padding-large hide-small">CONTACT</a>
+      <div class="navbar card">
+        <a class="navbar-item button padding-large hide-medium hide-large right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-navbars"></i></a>
+        <a href="#" class="navbar-item button padding-large">HOME</a>
+        <a href="#band" class="navbar-item button padding-large hide-small">BAND</a>
+        <a href="#tour" class="navbar-item button padding-large hide-small">TOUR</a>
+        <a href="#contact" class="navbar-item button padding-large hide-small">CONTACT</a>
         <div class="dropdown-hover hide-small">
           <button class="padding-large button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-          <div class="dropdown-content bar-block card-4">
-            <a href="#" class="bar-item button">Merchandise</a>
-            <a href="#" class="bar-item button">Extras</a>
-            <a href="#" class="bar-item button">Media</a>
+          <div class="dropdown-content navbar-block card-4">
+            <a href="#" class="navbar-item button">Merchandise</a>
+            <a href="#" class="navbar-item button">Extras</a>
+            <a href="#" class="navbar-item button">Media</a>
           </div>
         </div>
         <a href="javascript:void(0)" class="padding-large hover-red hide-small right"><i class="fa fa-search"></i></a>
       </div>
     </div>
 
-    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-    <div id="navDemo" class="bar-block black hide hide-large hide-medium top" style="margin-top:46px">
-      <a href="#" class="bar-item button padding-large" onclick="myFunction()">BAND</a>
-      <a href="#" class="bar-item button padding-large" onclick="myFunction()">TOUR</a>
-      <a href="#" class="bar-item button padding-large" onclick="myFunction()">CONTACT</a>
-      <a href="#" class="bar-item button padding-large" onclick="myFunction()">MERCH</a>
+    <!-- navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="navbar-block hide hide-large hide-medium top" style="margin-top:46px">
+      <a href="#" class="navbar-item button padding-large" onclick="myFunction()">BAND</a>
+      <a href="#" class="navbar-item button padding-large" onclick="myFunction()">TOUR</a>
+      <a href="#" class="navbar-item button padding-large" onclick="myFunction()">CONTACT</a>
+      <a href="#" class="navbar-item button padding-large" onclick="myFunction()">MERCH</a>
+    </div>
+
+    <!-- jumbtoron -->
+    <div class="" id="tour">
+      <div class="container content padding-64" style="w-full">
+        <img src="assets/beth-junction.jpg" alt="beth playing her guitar with a purpel and white background" />
+      </div>
     </div>
 
     <!-- Page content -->
@@ -68,8 +86,10 @@
         </div>
       </div>
 
+
+
       <!-- The Tour Section -->
-      <div class="black" id="tour">
+      <div class=" id="tour">
         <div class="container content padding-64" style="max-width:800px">
           <h2 class="wide center">GIG DATES</h2>
           <p class="opacity center"><i>Remember to book your tickets!</i></p><br>
@@ -87,7 +107,7 @@
                 <p><b>New York</b></p>
                 <p class="opacity">Fri 27 Nov 2016</p>
                 <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                <button class="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                <button class="button margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
               </div>
             </div>
             <div class="third margin-bottom">
@@ -96,7 +116,7 @@
                 <p><b>Paris</b></p>
                 <p class="opacity">Sat 28 Nov 2016</p>
                 <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                <button class="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                <button class="button margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
               </div>
             </div>
             <div class="third margin-bottom">
@@ -105,7 +125,7 @@
                 <p><b>San Francisco</b></p>
                 <p class="opacity">Sun 29 Nov 2016</p>
                 <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                <button class="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                <button class="button margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
               </div>
             </div>
           </div>
@@ -133,7 +153,7 @@
                 </div>
               </div>
               <input class="input border" type="text" placeholder="Message" required="" name="Message">
-              <button class="button black section right" type="submit">SEND</button>
+              <button class="button section right" type="submit">SEND</button>
             </form>
           </div>
         </div>
@@ -150,5 +170,6 @@
       <i class="fa fa-facebook-official hover-opacity"></i>
       <i class="fa fa-instagram hover-opacity"></i>
     </footer>
+    <script src="js/index.js"></script>
   </body>
 </html>
